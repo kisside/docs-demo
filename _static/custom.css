@@ -1,0 +1,138 @@
+/* ==========================================================================
+   Dark-mode fixes for Jupyter Book (pydata-sphinx-theme)
+   Targets the [data-theme="dark"] attribute set by the theme toggle.
+   ========================================================================== */
+
+/* --- Static code blocks (pre-Thebe) --- */
+html[data-theme="dark"] .highlight,
+html[data-theme="dark"] div.highlight {
+  background: #1e1e2e !important;
+}
+
+html[data-theme="dark"] .highlight pre,
+html[data-theme="dark"] div.highlight pre {
+  color: #cdd6f4 !important;
+  background: #1e1e2e !important;
+}
+
+/* Syntax token colours (Pygments-generated spans) */
+html[data-theme="dark"] .highlight .k,
+html[data-theme="dark"] .highlight .kn,
+html[data-theme="dark"] .highlight .kd { color: #cba6f7 !important; }  /* keywords */
+html[data-theme="dark"] .highlight .n  { color: #cdd6f4 !important; }  /* names */
+html[data-theme="dark"] .highlight .nn { color: #89dceb !important; }  /* module names */
+html[data-theme="dark"] .highlight .nf,
+html[data-theme="dark"] .highlight .fm { color: #89b4fa !important; }  /* functions */
+html[data-theme="dark"] .highlight .s,
+html[data-theme="dark"] .highlight .s1,
+html[data-theme="dark"] .highlight .s2,
+html[data-theme="dark"] .highlight .sa { color: #a6e3a1 !important; }  /* strings */
+html[data-theme="dark"] .highlight .mi,
+html[data-theme="dark"] .highlight .mf,
+html[data-theme="dark"] .highlight .mb { color: #fab387 !important; }  /* numbers */
+html[data-theme="dark"] .highlight .c,
+html[data-theme="dark"] .highlight .c1,
+html[data-theme="dark"] .highlight .ch { color: #6c7086 !important; }  /* comments */
+html[data-theme="dark"] .highlight .o  { color: #89dceb !important; }  /* operators */
+html[data-theme="dark"] .highlight .p  { color: #cdd6f4 !important; }  /* punctuation */
+html[data-theme="dark"] .highlight .nb { color: #f9e2af !important; }  /* builtins */
+html[data-theme="dark"] .highlight .bp { color: #f38ba8 !important; }  /* builtin pseudo (self) */
+html[data-theme="dark"] .highlight .ow { color: #cba6f7 !important; }  /* operator word (in, not) */
+
+/* --- Thebe / CodeMirror live cells --- */
+html[data-theme="dark"] .thebelab-cell .CodeMirror,
+html[data-theme="dark"] .thebe-cell .CodeMirror {
+  background: #1e1e2e !important;
+  color: #cdd6f4 !important;
+}
+
+html[data-theme="dark"] .CodeMirror-gutters {
+  background: #181825 !important;
+  border-right: 1px solid #313244 !important;
+}
+
+html[data-theme="dark"] .CodeMirror-linenumber {
+  color: #6c7086 !important;
+}
+
+html[data-theme="dark"] .CodeMirror-activeline-background {
+  background: #242437 !important;
+}
+
+html[data-theme="dark"] .CodeMirror-matchingbracket {
+  color: #f5e0dc !important;
+  background: #45475a !important;
+}
+
+html[data-theme="dark"] .CodeMirror-cursor {
+  border-left-color: #cdd6f4 !important;
+}
+
+html[data-theme="dark"] .CodeMirror-selected {
+  background: #45475a !important;
+}
+
+/* CodeMirror syntax (mirrors the Pygments palette above) */
+html[data-theme="dark"] .cm-keyword   { color: #cba6f7 !important; }
+html[data-theme="dark"] .cm-def       { color: #89b4fa !important; }
+html[data-theme="dark"] .cm-variable  { color: #cdd6f4 !important; }
+html[data-theme="dark"] .cm-variable-2 { color: #89dceb !important; }
+html[data-theme="dark"] .cm-string    { color: #a6e3a1 !important; }
+html[data-theme="dark"] .cm-string-2  { color: #a6e3a1 !important; }
+html[data-theme="dark"] .cm-number    { color: #fab387 !important; }
+html[data-theme="dark"] .cm-comment   { color: #6c7086 !important; }
+html[data-theme="dark"] .cm-operator  { color: #89dceb !important; }
+html[data-theme="dark"] .cm-builtin   { color: #f9e2af !important; }
+html[data-theme="dark"] .cm-meta      { color: #f38ba8 !important; }
+html[data-theme="dark"] .cm-property  { color: #89b4fa !important; }
+html[data-theme="dark"] .cm-atom      { color: #fab387 !important; }
+
+/* --- Thebe buttons (run, restart, etc.) --- */
+html[data-theme="dark"] .thebelab-button,
+html[data-theme="dark"] .thebe-button,
+html[data-theme="dark"] button.thebelab-button,
+html[data-theme="dark"] button.thebe-button {
+  background: #313244 !important;
+  color: #cdd6f4 !important;
+  border: 1px solid #45475a !important;
+}
+
+html[data-theme="dark"] .thebelab-button:hover,
+html[data-theme="dark"] .thebe-button:hover,
+html[data-theme="dark"] button.thebelab-button:hover,
+html[data-theme="dark"] button.thebe-button:hover {
+  background: #45475a !important;
+  color: #f5e0dc !important;
+}
+
+/* --- Thebe output area --- */
+html[data-theme="dark"] .thebelab-cell .jp-OutputArea,
+html[data-theme="dark"] .thebe-cell .jp-OutputArea,
+html[data-theme="dark"] .thebelab-cell .output,
+html[data-theme="dark"] .thebe-cell .output,
+html[data-theme="dark"] .cell_output .output {
+  background: #181825 !important;
+  color: #cdd6f4 !important;
+}
+
+html[data-theme="dark"] .cell_output pre {
+  color: #cdd6f4 !important;
+  background: #1e1e2e !important;
+}
+
+/* --- Notebook cell input prompt labels ([1]: etc) --- */
+html[data-theme="dark"] .cell_input .prompt,
+html[data-theme="dark"] .cell_output .prompt {
+  color: #6c7086 !important;
+}
+
+/* --- Launch buttons in the toolbar --- */
+html[data-theme="dark"] .dropdown-buttons .launch-buttons a,
+html[data-theme="dark"] .dropdown-buttons .launch-buttons button {
+  color: #cdd6f4 !important;
+}
+
+html[data-theme="dark"] .dropdown-buttons .launch-buttons a:hover,
+html[data-theme="dark"] .dropdown-buttons .launch-buttons button:hover {
+  color: #89b4fa !important;
+}
