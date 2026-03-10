@@ -1,0 +1,44 @@
+###############################################################################
+# Jupyter Book Configuration
+###############################################################################
+title: "RatioNAI Docs Demo"
+author: "RatioNAI"
+logo: ""
+
+# Execute notebooks during build (turn off if you want fast builds)
+execute:
+  execute_notebooks: "off"
+
+###############################################################################
+# Repository & launch buttons — this is what makes cells remotely runnable
+###############################################################################
+repository:
+  url: "https://github.com/kisside/docs-demo"
+  path_to_book: ""
+  branch: "main"
+
+launch_buttons:
+  # --- Thebe (live code): runs cells *in the page* via your JupyterHub kernel ---
+  thebe: true
+
+  # --- JupyterHub button: opens notebook on your hub ---
+  jupyterhub_url: "https://hub.rationai.cloud.e-infra.cz"
+  notebook_interface: "jupyterlab"
+
+  # --- Binder: powers Thebe "Live Code" (in-page execution) ---
+  binderhub_url: "https://mybinder.org"
+
+  # --- (Optional) Google Colab ---
+  # colab_url: "https://colab.research.google.com"
+
+###############################################################################
+# HTML theme settings
+###############################################################################
+html:
+  use_issues_button: true
+  use_repository_button: true
+  use_edit_page_button: true
+
+sphinx:
+  extra_extensions:
+    - sphinx_togglebutton

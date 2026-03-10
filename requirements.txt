@@ -1,0 +1,4 @@
+# Binder reads this file to build the remote kernel environment.
+# Keep it minimal — only what the notebooks need at runtime.
+numpy
+matplotlib

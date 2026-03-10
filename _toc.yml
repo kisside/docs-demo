@@ -1,0 +1,6 @@
+format: jb-book
+root: docs/index
+chapters:
+  - file: docs/getting-started
+  - file: docs/demo-notebook
+  - file: docs/heavy-computation
