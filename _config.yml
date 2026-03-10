@@ -42,3 +42,8 @@ html:
 sphinx:
   extra_extensions:
     - sphinx_togglebutton
+  config:
+    html_js_files:
+      - thebe-custom.js
+    html_css_files:
+      - custom.css
